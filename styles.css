@@ -1,3 +1,20 @@
-body {
-  background-color: black;
+body, html {
+  height: 100%;
+  background-image: url("images/cupKayHero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.row {
+  height: 50%;
+  position: absolute;
 }

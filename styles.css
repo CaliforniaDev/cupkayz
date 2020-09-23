@@ -7,7 +7,7 @@ body, html {
 .navbar {
   display: flex;
   height: 20vh;
-  background-color: white;
+  background-color: #778c70;
   align-items: center;
 }
 .logo {

@@ -10,13 +10,14 @@ body, html {
   background-color: #778c7c;
   align-items: center;
 }
-.logo {
-  margin: 0 0 0 .45em;
+.navbar img {
+  margin: 0 0 0 0.45em;
+  width: 6em;
 }
 
 
 @media (min-width: 600px) {
   body {
-    background-color: green;
+    background-color: white;
   }
 }

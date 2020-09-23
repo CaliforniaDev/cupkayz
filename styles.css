@@ -1,20 +1,22 @@
 body, html {
-  height: 100%;
-  background-image: url("images/cupKayHero.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  height: 20vh;
+  background-color: white;
+  align-items: center;
+}
+.logo {
+  margin: 0 0 0 .45em;
 }
 
-.header {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-.row {
-  height: 50%;
-  position: absolute;
+@media (min-width: 600px) {
+  body {
+    background-color: green;
+  }
 }

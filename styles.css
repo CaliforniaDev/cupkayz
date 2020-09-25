@@ -17,19 +17,8 @@ body {
 .hero a:nth-child(1) {
   width: 3em;
 }
-#navbar {
-  height: 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #745856;
-}
-#navbar a {
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  text-align: center;
-}
+
+
 .content {
   padding: 2em;
 }
@@ -51,10 +40,20 @@ body {
   .hero {
     height: 90vh;
   }
-  #navbar {
-    flex-direction: row;
-    height: 10vh;
-  }
+#navbar div {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #745856;
+}
+#navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
     .hero a:nth-child(1) {
       margin: 0 0 0 2em;
       width: 4em;

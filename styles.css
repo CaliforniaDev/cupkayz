@@ -9,7 +9,7 @@ body {
 }
 .hero {
   display: flex;
-  height: 20vh;
+  height: 90vh;
   background-color: #778c7c;
   align-items: center;
   justify-content: center;
@@ -18,8 +18,10 @@ body {
   width: 3em;
 }
 #navbar {
+  height: 10vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: #745856;
 }
 #navbar a {
@@ -37,7 +39,7 @@ body {
   width: 100%;
 }
 .sticky + .content {
-  padding-top: 60px;
+  padding-top: 11em;
 }
 
 
@@ -46,8 +48,12 @@ body {
   body {
     background-color: white;
   }
+  .hero {
+    height: 90vh;
+  }
   #navbar {
     flex-direction: row;
+    height: 10vh;
   }
     .hero a:nth-child(1) {
       margin: 0 0 0 2em;
@@ -56,5 +62,8 @@ body {
   .hero a:nth-child(2) {
     margin: 1em 0 0 2em;
     width: 13em;
+  }
+  .sticky + .content {
+    padding-top: 5em;
   }
 }

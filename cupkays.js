@@ -13,10 +13,10 @@ window.onscroll = () => stickyNavbar();
 function stickyNavbar() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
-    openButton.classList.add("sticky");
+    //openButton.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
-    openButton.classList.remove("sticky");
+    //openButton.classList.remove("sticky");
   };
 };
 

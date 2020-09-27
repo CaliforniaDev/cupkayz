@@ -53,6 +53,7 @@ body {
   right: 45px;
   font-size: 60px;
 }
+
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
@@ -88,6 +89,7 @@ body {
   height: 10vh;
   width: 100%;
   display: flex;
+  position: relative;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -113,7 +115,4 @@ body {
   .sticky + .content {
     padding-top: 5em;
   }
-}
-#closeBtn {
-  z-index: -1;
 }

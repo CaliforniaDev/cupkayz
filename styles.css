@@ -1,3 +1,4 @@
+
 body, html {
   margin: 0;
   padding: 0;
@@ -15,14 +16,25 @@ body {
 }
 .hero {
   display: flex;
-  height: 90vh;
+  height: 95vh;
   background-color: #778c7c;
   align-items: center;
   justify-content: center;
+  border-bottom: 2vh solid #f2b4ad;
 }
 .hero a:nth-child(1) {
   width: 5em;
   transition: 2s;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+.wrapper > article {
+  background: #eee;
+}
+.wrapper > article:nth-child(odd) {
+  background: #ddd;
 }
 /* Mobile CurtainNav Below */
 .overlay {
@@ -76,9 +88,7 @@ body {
 
 
 /* sticky navbar */
-.content {
-  padding: 2em;
-}
+
 .sticky {
   position: fixed;
   top: 0;
@@ -96,11 +106,8 @@ body {
   background-color: white;
 }
 .hero {
-  height: 93vh;
-}
-.pinLineStripe {
-  background-color: #f2b4ad;
-  height: 1vh;
+  height: 92vh;
+  border-bottom: 0;
 }
 #navbar div {
   height: 7vh;
@@ -111,6 +118,7 @@ body {
   justify-content: space-around;
   align-items: center;
   background-color: #745856;
+  border-bottom: 1vh solid #f2b4ad;
 }
 #navbar a {
   width: 100%;
@@ -124,8 +132,10 @@ body {
 
 }
 #navbar a:hover, #navbar a:focus {
-  color: #f2b4ad;
-  background-color: #886f6c;
+  color: #778c7c;
+  font-size: 26px;
+  font-weight: bolder;
+  background-color: #f2b4ad;
   transition: 0.4s;
 }
 #openButton {
@@ -154,7 +164,18 @@ div #closeButton {
   display: none;
 }
 .sticky + .content {
-  padding-top: 5em;
+  padding-top: 3em;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+.wrapper > article {
+  background: #eee;
+  height: 50vh;
+}
+.wrapper > article:nth-child(odd) {
+  background: #ddd
 }
 
 

@@ -28,13 +28,13 @@ body {
 }
 .wrapper {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 40% 30% 30%;
 }
 .wrapper > article {
-  background: #eee;
+  background: ;
 }
 .wrapper > article:nth-child(odd) {
-  background: #ddd;
+  background: ;
 }
 /* Mobile CurtainNav Below */
 .overlay {
@@ -109,9 +109,13 @@ body {
   height: 92vh;
   border-bottom: 0;
 }
+#navbar {
+  width: 100%;
+  box-shadow: 0 -2px 20px 0px #745856;
+
+}
 #navbar div {
   height: 7vh;
-  width: 100%;
   display: flex;
   position: relative;
   flex-direction: row;
@@ -172,11 +176,12 @@ div #closeButton {
 }
 .wrapper > article {
   background: #eee;
-  height: 50vh;
+  height: 20vh;
 }
 .wrapper > article:nth-child(odd) {
   background: #ddd
 }
+
 
 
 }

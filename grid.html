@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Grid</title>
+  <style>
+  .wrapper {
+    display: grid;
+    /* grid-template-columns: 1fr 2fr 2fr 1fr; */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    /* grid-auto-rows: 100px; */
+    grid-auto-rows: minmax(100px, auto)
+  }
+  .nested {
+    color: red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 80px;
+
+  }
+  .nested > div {
+    border: #333 1px solid;
+    padding: 1em;
+  }
+  .wrapper > div {
+    background: #eee;
+    padding: 1em;
+  }
+  .wrapper > div:nth-child(odd) {
+    background: #ddd;
+  }
+
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div>
+      multos tempor noster cillum
+    </div>
+    <div>
+      multos tempor noster cillum
+      Quis sed laborum est cillum, fugiat ad nescius, an fore quid nam mentitum id de
+      an anim veniam velit ea appellat export nescius ad est anim exercitation ad qui
+      amet cupidatat graviterque, quem te mandaremus. Incididunt noster ubi vidisse
+      firmissimum, minim voluptate in sint noster, velit cernantur ex fidelissimae,
+      laboris irure sint occaecat legam et o magna deserunt ingeniis ex ut de
+      exercitation ea officia ea vidisse, a aute tempor eu quamquam. Dolore possumus
+
+    </div>
+    <div class="nested">
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+      <div>Lorem</div>
+
+    </div>
+    <div>
+      multos tempor noster cillum
+    </div>
+    <div>
+      multos tempor noster cillum
+    </div>
+    <div>
+      multos tempor noster cillum
+    </div>
+    <div>
+      multos tempor noster cillum
+    </div>
+    <div>
+      multos tempor noster cillum
+    </div>
+  </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 
-body, html {
+body, html, * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,14 +28,22 @@ body {
 }
 .wrapper {
   display: grid;
-  grid-template-columns: 40% 30% 30%;
+  grid-template-columns: 2fr 4fr;
+  grid-auto-rows: minmax(250px, auto);
+  grid-gap: 0.5em;
 }
-.wrapper > article {
-  background: ;
+.wrapper > div {
+  background: #eee;
+  padding: 1em;
 }
-.wrapper > article:nth-child(odd) {
-  background: ;
+.wrapper > div:nth-child(odd) {
+  background: #ddd;
 }
+.box5 {
+  grid-column: 1/3;
+  grid-row: 3/6;
+}
+
 /* Mobile CurtainNav Below */
 .overlay {
   height: 100%;
@@ -106,7 +114,7 @@ body {
   background-color: white;
 }
 .hero {
-  height: 92vh;
+  height: 90vh;
   border-bottom: 0;
 }
 #navbar {
@@ -168,19 +176,8 @@ div #closeButton {
   display: none;
 }
 .sticky + .content {
-  padding-top: 3em;
-}
-.wrapper {
-  display: grid;
-  grid-template-columns: 70% 30%;
-}
-.wrapper > article {
-  background: #eee;
-  height: 20vh;
-}
-.wrapper > article:nth-child(odd) {
-  background: #ddd
-}
+  padding-top: 10.5vh;
+
 
 
 

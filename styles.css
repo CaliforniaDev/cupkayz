@@ -1,22 +1,42 @@
+
 body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-size: 28px;
+  font-size: 21px;
   font-family: Arial, Helvetica, sans-serif;
+}
+#openButton {
+  margin: .35em 0 0 .6em;
+  color: #745856;
+  cursor: pointer;
+
 }
 .hero {
   display: flex;
-  height: 90vh;
+  height: 95vh;
   background-color: #778c7c;
   align-items: center;
   justify-content: center;
+  border-bottom: 2vh solid #f2b4ad;
 }
 .hero a:nth-child(1) {
-  width: 3em;
+  width: 5em;
+  transition: 2s;
 }
+.wrapper {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+.wrapper > article {
+  background: #eee;
+}
+.wrapper > article:nth-child(odd) {
+  background: #ddd;
+}
+/* Mobile CurtainNav Below */
 .overlay {
   height: 100%;
   width: 0;
@@ -25,7 +45,8 @@ body {
   left: 0;
   top: 0;
   background-color: rgb(0,0,0);
-  background-color: rgb(0,0,0);
+  background-color: #745856;
+  opacity: 0.95;
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -40,12 +61,12 @@ body {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color: #778c7c;
   display: block;
   transition: 0.3s;
 }
 .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+  color: #f2b4ad;
 }
 .overlay .closebtn {
   position: absolute;
@@ -53,6 +74,7 @@ body {
   right: 45px;
   font-size: 60px;
 }
+
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
@@ -61,59 +83,107 @@ body {
     right: 35px;
   }
 }
+/* End of CurtainNav */
+
+
+
 /* sticky navbar */
-.content {
-  padding: 2em;
-}
+
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+  transition: 0.5s;
+  opacity: .95;
 }
-.sticky + .content {
-  padding-top: 11em;
-}
+
 /*sticky navbar END */
 
 
-
+/* Desktop Settings Below */
 @media (min-width: 600px) {
-  body {
-    background-color: white;
-  }
-  .hero {
-    height: 90vh;
-  }
+body {
+  background-color: white;
+}
+.hero {
+  height: 92vh;
+  border-bottom: 0;
+}
 #navbar div {
-  height: 10vh;
+  height: 7vh;
   width: 100%;
   display: flex;
+  position: relative;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #745856;
+  border-bottom: 1vh solid #f2b4ad;
 }
 #navbar a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
   color: white;
-  padding: 14px 20px;
   text-decoration: none;
   text-align: center;
+  align-items: center;
+
 }
-    .hero a:nth-child(1) {
-      margin: 0 0 0 2em;
-      width: 4em;
-    }
-  .hero a:nth-child(2) {
-    margin: 1em 0 0 2em;
-    width: 13em;
-  }
-  .overlay .closebtn {
-    display: none;
-  }
-  .sticky + .content {
-    padding-top: 5em;
-  }
+#navbar a:hover, #navbar a:focus {
+  color: #778c7c;
+  font-size: 26px;
+  font-weight: bolder;
+  background-color: #f2b4ad;
+  transition: 0.4s;
 }
-#closeBtn {
-  z-index: -1;
+#openButton {
+  display: none;
+}
+#closeButtonContainer {
+  visibility: hidden;
+  display: none;
+
+}
+div #closeButton {
+  position: absolute;
+  display: none;
+  height: 20%;
+
+}
+.hero a:nth-child(1) {
+  margin: 0 0 0 2em;
+  width: 5em;
+}
+.hero a:nth-child(2) {
+  margin: 1em 0 0 2em;
+  width: 14em;
+}
+.overlay .closebtn {
+  display: none;
+}
+.sticky + .content {
+  padding-top: 3em;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+.wrapper > article {
+  background: #eee;
+  height: 50vh;
+}
+.wrapper > article:nth-child(odd) {
+  background: #ddd
+}
+
+
+}
+/* Desktop Media Query End */
+
+/*stops animation while resizing */
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
 }

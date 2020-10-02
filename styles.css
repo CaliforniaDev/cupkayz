@@ -28,13 +28,14 @@ body {
 }
 .wrapper {
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 1fr 4fr;
   grid-auto-rows: minmax(250px, auto);
   grid-gap: 0.5em;
 }
 .wrapper > div {
   background: #eee;
   padding: 1em;
+  border-radius: 20px;
 }
 .wrapper > div:nth-child(odd) {
   background: #ddd;

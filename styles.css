@@ -15,9 +15,16 @@ h2 {
   color: #778c7c;
 }
 #openButton {
+  z-index: 100;
   margin: .35em 0 0 .6em;
+  padding: .5em;
   color: #745856;
   cursor: pointer;
+  font-size: 30px;
+  background-color: #F2B4AD;
+  width: auto;
+  border-radius: 30px;
+  opacity: 0.7;
 
 }
 .hero {
@@ -33,22 +40,27 @@ h2 {
   transition: 2s;
 }
 main {
-
+  margin: 1em 1em 0 1em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 1em;
   cursor: pointer;
 }
+main > .grid-content {
+  padding: 1em;
+  background-color: #f2b4ad;
+  border-radius: 10px;
+}
 .box > img {
   width: 100%;
   border-radius: 10px;
 }
-/*
-.box > img:hover, .box > img:focus {
+
+.grid-content:hover {
   transition: transform .5s;
-  transform: translateY(10px);
+  transform: translateY(-10px);
 }
-*/
+
 main > .grid-text {
   background-color: #f2b4ad;
   border-radius: 10px;

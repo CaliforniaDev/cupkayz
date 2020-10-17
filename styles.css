@@ -3,15 +3,28 @@ body, html, * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+
 }
 body {
   font-size: 21px;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #745856;
+}
+h2 {
+  color: #778c7c;
 }
 #openButton {
+  z-index: 100;
   margin: .35em 0 0 .6em;
+  padding: .5em;
   color: #745856;
   cursor: pointer;
+  font-size: 30px;
+  background-color: #F2B4AD;
+  width: auto;
+  border-radius: 30px;
+  opacity: 0.7;
 
 }
 .hero {
@@ -26,24 +39,34 @@ body {
   width: 5em;
   transition: 2s;
 }
-.wrapper {
+main {
+  margin: 1em 1em 0 1em;
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-auto-rows: minmax(250px, auto);
-  grid-gap: 0.5em;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 1em;
+  cursor: pointer;
 }
-.wrapper > div {
-  background: #eee;
+main > .grid-content {
   padding: 1em;
-  border-radius: 20px;
+  background-color: #f2b4ad;
+  border-radius: 10px;
 }
-.wrapper > div:nth-child(odd) {
-  background: #ddd;
+.box > img {
+  width: 100%;
+  border-radius: 10px;
 }
-.box5 {
-  grid-column: 1/3;
-  grid-row: 3/6;
+
+.grid-content:hover {
+  transition: transform .5s;
+  transform: translateY(-10px);
 }
+
+main > .grid-text {
+  background-color: #f2b4ad;
+  border-radius: 10px;
+
+}
+
 
 /* Mobile CurtainNav Below */
 .overlay {
@@ -112,11 +135,12 @@ body {
 /* Desktop Settings Below */
 @media (min-width: 600px) {
 body {
-  background-color: white;
+  background-color: 886f6c;
 }
 .hero {
   height: 90vh;
-  border-bottom: 0;
+
+  border-bottom: 1vh solid #f2b4ad;
 }
 #navbar {
   width: 100%;
@@ -178,8 +202,28 @@ div #closeButton {
 }
 .sticky + .content {
   padding-top: 10.5vh;
+}
+main {
 
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+main > .grid-content {
+  background-color: #f2b4ad;
+  padding: .5em;
+  border-radius: 10px;
+}
+.box > img {
+  width: 100%;
+}
 
+.grid-content:hover {
+  transition: transform .5s;
+  transform: translateY(-10px);
+}
 
 
 }
